@@ -11,13 +11,28 @@ curl -fsSL https://storage.googleapis.com/flutter_infra_release/releases/stable/
 
 
 # Unzip
+
 ```
 tar xf flutter.tar.xz
 ```
 
 
 
-# 
+# Export path
+
 ```
 export PATH="$PATH:`pwd`/flutter/bin" && flutter --version
-```1
+```
+
+
+### Go to Project --> export path -->> Check flutter doctor
+
+```
+cd /home/nazmul/Desktop/PrivecyApp/privacy_app_flutter && export PATH="$PATH:`pwd`/../flutter/bin" && flutter doctor
+```
+
+### Run
+
+```
+cd /home/nazmul/Desktop/PrivecyApp/privacy_app_flutter && export PATH="$PATH:`pwd`/../flutter/bin" && flutter run -d chrome --web-port=8080
+```
