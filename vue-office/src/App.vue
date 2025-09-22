@@ -4,18 +4,21 @@
 
 
 <script setup>
+import { onMounted, reactive, ref } from 'vue';
 
-const OFFICE_API = "https://school.frappe.io/api/method/get-office/";
+
+const data = reactive({
+  data: []
+})
+
+// const OFFICE_API = "https://jsonplaceholder.typicode.com/todos/";
 // const OFFICE_API = "https://platform.buildwithhussain/api/method/get-office";
+const OFFICE_API = "https://http.cat/wqfver2";
 
-fetch(OFFICE_API)
-.then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error fetching office data:', error);
-  });
-
-</script>
-
+onMounted(() =>{
+ fetch('https://jsonplaceholder.typicode.com/todos/')
+      .then(response => response.json())
+      .then(json => console.log(json))
+})
   
+</script>
